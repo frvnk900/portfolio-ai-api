@@ -1,7 +1,7 @@
 from config import LLM
 from template import system_prompt
 from langchain_core.prompts import PromptTemplate
-from data import load_conversation, save_conversation
+from app.data import load_conversation, save_conversation
 import requests
 
 # Build prompt once at module level
@@ -59,3 +59,4 @@ def ai(user_text: str) -> str:
 
     except Exception as e:
         return f"❗ An unexpected error occurred.\n\nDetails: {str(e)}"
+
