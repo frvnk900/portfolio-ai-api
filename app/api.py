@@ -8,7 +8,7 @@ from app.chatbot import ai
 from app.data import get_all_messages
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["https://frank-kwizigira.onrender.com"]) 
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
