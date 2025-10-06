@@ -4,8 +4,8 @@ import threading
 import logging
 from flask import Flask, request, jsonify, Response
 from flask_cors import CORS
-from chatbot import ai
-from data import get_all_messages
+from app.chatbot import ai
+from app.data import get_all_messages
 
 app = Flask(__name__)
 CORS(app)
@@ -75,3 +75,4 @@ def get_messages():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8001))
     app.run(debug=False, threaded=True, port=port)
+
